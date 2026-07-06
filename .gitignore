@@ -1,4 +1,13 @@
-/frontend/node_modules
-/data
-.env
+# Root Node dependency exclusions
 /node_modules
+
+# Backend service exclusions
+/backend/node_modules
+/backend/data
+/backend/.env
+
+# Frontend client exclusions
+/frontend/node_modules
+/frontend/dist
+/frontend/.env
+/frontend/.env.*
