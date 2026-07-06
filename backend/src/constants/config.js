@@ -3,7 +3,7 @@ dotenv.config();
 
 export const CONFIG = {
   PORT: process.env.PORT || 5000,
-  CORS_ORIGIN: process.env.CORS_ORIGIN || '*',
+  CORS_ORIGIN: (process.env.CORS_ORIGIN || '*').trim().replace(/^["']|["']$/g, ''),
   
   // Folders
   PDF_DIR: process.env.PDF_DIR || 'data',

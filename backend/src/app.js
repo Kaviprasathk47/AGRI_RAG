@@ -18,7 +18,7 @@ const app = express();
 app.use(helmet());
 
 // 2. Enable CORS with dynamic host check and credential permissions
-const allowedOrigins = CONFIG.CORS_ORIGIN === '*' ? '*' : CONFIG.CORS_ORIGIN.split(',').map(o => o.trim());
+const allowedOrigins = CONFIG.CORS_ORIGIN === '*' ? '*' : CONFIG.CORS_ORIGIN.split(',').map(o => o.trim().replace(/\/$/, ''));
 
 app.use(cors({
   origin: (origin, callback) => {
