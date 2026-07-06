@@ -15,12 +15,15 @@ export default function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [refreshTrigger, setRefreshTrigger] = useState(0);
 
-  // Sync dark class on body element
+  // Sync dark class on body & document element
   useEffect(() => {
+    const root = document.documentElement;
     if (darkMode) {
+      root.classList.add('dark');
       document.body.classList.add('dark');
       document.body.style.backgroundColor = '#0b0f19'; // Slate-950 color
     } else {
+      root.classList.remove('dark');
       document.body.classList.remove('dark');
       document.body.style.backgroundColor = '#f8fafc'; // Slate-50 color
     }
