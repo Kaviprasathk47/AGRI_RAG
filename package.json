@@ -6,7 +6,7 @@
     "install-backend": "npm install --prefix backend",
     "install-frontend": "npm install --prefix frontend",
     "build-frontend": "npm run build --prefix frontend",
-    "build": "npm run build-frontend",
+    "build": "npm run install-frontend && npm run build-frontend",
     "start": "node backend/src/server.js"
   }
 }
